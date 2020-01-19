@@ -110,6 +110,7 @@ class App extends Component {
            <h2>Favorite Movies</h2>
 
           {profiles.map(profile => {
+            console.log('usersLog',users[profile.userID])
             const userName = users[profile.userID].name;
             const favMovieName = movies[profile.favoriteMovieID].name;
 
@@ -125,7 +126,7 @@ class App extends Component {
               course:
               https://www.udacity.com/course/es6-javascript-improved--ud356
                 */}
-                <p>{`${userName}\'s favorite movie is "${favMovieName}."`}</p>
+                <p>{`${userName}'s favorite movie is "${favMovieName}."`}</p>
               </li>
             );
           })}
